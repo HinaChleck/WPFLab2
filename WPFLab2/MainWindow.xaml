@@ -1,0 +1,248 @@
+﻿<Window x:Class="WPFLab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLab2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="450" MinHeight="700" MinWidth="350">
+    <Grid Margin="2,0,2,0">
+   
+        <Grid Margin="0" Background="#FF011D28">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                
+                
+            </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"  VerticalAlignment="Top" Content="calc" Padding="5,2,0,0" Background="#C8890B2E" Foreground="#011D28" FontFamily="Arial Black" FontStretch="UltraExpanded" Height="20" FontSize="14" FontWeight="Bold" />
+
+                <TextBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"  Height ="Auto" MinHeight="100" TextWrapping="Wrap" FontFamily="ArialBold" Text="0" TextAlignment="Right" 
+                   FontSize="60" Margin="0" Padding="10,10,10,10" VerticalContentAlignment="Center" Grid.IsSharedSizeScope="True" Foreground="#FC011D28" FontStyle="Normal" FontStretch="Condensed" FontWeight="Bold">
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.3,1" StartPoint="0.2,0">
+                            <GradientStop Color="#FFA18585"/>
+                            <GradientStop Color="#FFE0DACD" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+
+                <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Height="20" VerticalAlignment="Top" Margin="0" Background="#C8890B2E"/>
+
+            <Button Grid.Column="0" Grid.Row="3" Content="Ö" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Symbol" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000" ClipToBounds="False" Click="Button_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+          
+            <Button Grid.Column="1" Grid.Row="3" Content="x²" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Viewbox/>
+            <Button Grid.Column="2" Grid.Row="3" Content="1/x" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="3" Content="C" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="1,1,1,1" ClipToBounds="True">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button Grid.Column="0" Grid.Row="4" Content="M+" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" BorderBrush="#FF050000" ClipToBounds="False">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="4" Content="M-" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="4" Content="%" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" IsDefault="True" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="4" Content="/" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" IsCancel="True" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Grid.Column="0" Grid.Row="5" Content="1" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000" ClipToBounds="False">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="5" Content="2" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="5" Content="3" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="5" Content="x" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Grid.Column="0" Grid.Row="6" Content="4" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000" ClipToBounds="False">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="6" Content="5" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="6" Content="6" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="6" Content="-" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Grid.Column="0" Grid.Row="7" Content="7" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000" ClipToBounds="False">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="7" Content="8" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="7" Content="9" Margin="2,3,2,3" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="7" Grid.RowSpan="2" Content="+" Margin="2,3,2,8" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="72" BorderThickness="1,1,1,1" ClipToBounds="True">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Grid.Column="0" Grid.Row="8" Content="0" Margin="2,3,2,8" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000" ClipToBounds="False">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="8" Content="," Margin="2,3,2,8" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="48" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="8" Content="=" Margin="2,3,2,8" Padding="10,10,10,10" UseLayoutRounding="True" FontFamily="Arial Black" FontSize="36" BorderThickness="2,2,2,2" BorderBrush="#FF050000">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.3,0.4" StartPoint="0.2,0">
+                        <GradientStop Color="#FFA18585"/>
+                        <GradientStop Color="#FFEBCBC0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>
+
+    
